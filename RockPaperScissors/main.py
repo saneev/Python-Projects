@@ -2,6 +2,15 @@ import random
 
 
 def play():
+
+    '''
+    Method that is being called to play the game
+    Takes input from user
+    Randomly selects inpur for the computer
+    Determines who won
+
+    '''
+
     user = str(input("Enter 'r' for rock, 'p' paper, 's' for scissors:\t"))
     computer = random.choice(['r', 'p', 's'])
 
@@ -10,10 +19,19 @@ def play():
     elif IsWin(user, computer):
         return "You win! Congrats."
 
-    return "You Lost! Try again"
+    return "Computer Won! Try again"
 
 
 def IsWin(player, opponent):
+
+    '''
+
+    Returns True if the player won. Based on the conditions -
+    Rock > Scissors
+    Paper > Rock
+    Scissors > Paper
+
+    '''
 
     if (player == 'r' and opponent == 's') or \
         (player == 'p' and opponent == 'r')\
@@ -22,4 +40,11 @@ def IsWin(player, opponent):
 
 
 if __name__ == '__main__':
-    print(play())
+
+    '''
+
+    Constructor; Calls the play function to initiate the game
+
+    '''
+    result = play()
+    print(result)
