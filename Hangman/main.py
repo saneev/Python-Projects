@@ -21,6 +21,13 @@ def getValidWord(words):
 
 def hangman():
 
+    '''
+    Gets a valid word in Uppercase. Players will have 3 lives
+    Players tries to guess the word until the word is guessed
+    or until the lives are exhausted
+
+    '''
+
     word = getValidWord(words)
     print(word)
     word_letters = set(word)  # Letters in the selected Word
@@ -70,5 +77,4 @@ def hangman():
 
 
 if __name__ == "__main__":
-
-    hangman()
+    hangman()  # Method call to initiate the game
